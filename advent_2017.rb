@@ -1,4 +1,4 @@
-class Advent
+class AdventSeventeen
     def digits_match(input)
         result = 0
         input_arr = input.split("")
