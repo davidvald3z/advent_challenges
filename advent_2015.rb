@@ -2132,4 +2132,20 @@ class AdventFifteen
         end
         (houses_santa + houses_robo).uniq.size
     end
+
+    def md5_hash_finder
+        require 'digest'
+
+        secret_key = "iwrupvqb"
+        counter = 1
+
+        loop do
+            md_hash = Digest::MD5.hexdigest(secret_key + counter.to_s)
+            break if md_hash.slice(0, 6) == '000000'
+
+            counter += 1
+        end
+        
+        counter
+    end
 end
