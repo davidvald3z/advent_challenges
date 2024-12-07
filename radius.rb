@@ -13,7 +13,7 @@ class Radius
 
     def palindromo(pal)
         is_pal = true
-        apl_arr = pal.split("")
+        pal_arr = pal.split("")
         last_pos = apl_arr.size - 1
 
         apl_arr.each_with_index do |c, i|
@@ -23,6 +23,11 @@ class Radius
         end
 
         is_pal
+    end
+
+    def palindromo_shorter_way(pal)
+        pal_arr = pal.split("")
+        pal == pal_arr.reverse.join
     end
 
     def sort_pal(pal)
